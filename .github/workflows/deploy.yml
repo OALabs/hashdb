@@ -60,6 +60,7 @@ jobs:
           LAYER_VERSION=$(jq '.Version' <<< "$RESULT_DATA")
           echo "Updating dependent lambda functions to use layer version $LAYER_VERSION..." 
           UPDATE_RESULT_DATA=$(aws lambda update-function-configuration --function-name "$DEPENDENT_LAMBDA_FUNCTION" --layers "$LAMBDA_LAYER_ARN:$LAYER_VERSION")
+          echo '::set-output name=SELECTED_COLOR::green'
           echo "Done"
 
 
