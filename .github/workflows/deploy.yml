@@ -53,11 +53,13 @@ jobs:
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           LAMBDA_LAYER_ARN: ${{ secrets.LAMBDA_LAYER_ARN }}
           AWS_DEFAULT_REGION: ${{ secrets.AWS_REGION }}
+          DEPENDENT_LAMBDA_FUNCTION: ${{ secrets.DEPENDENT_LAMBDA_FUNCTION }}
         run: |
           echo "Publishing as a layer..."
-          local result=$(aws lambda publish-layer-version --layer-name "$LAMBDA_LAYER_ARN" --zip-file fileb://dist/hashdb.zip)
-          LAYER_VERSION=$(jq '.Version' <<< "$result")
-          echo "$LAYER_VERSION" 
-
+          RESULT_DATA=$(aws lambda publish-layer-version --layer-name "$LAMBDA_LAYER_ARN" --zip-file fileb://dist/hashdb.zip)
+          LAYER_VERSION=$(jq '.Version' <<< "$RESULT_DATA")
+          echo "Updating dependent lambda function $DEPENDENT_LAMBDA_FUNCTION to use layer version $LAYER_VERSION..." 
+          aws lambda update-function-configuration --function-name "$DEPENDENT_LAMBDA_FUNCTION" --layers "$LAMBDA_LAYER_ARN:$LAYER_VERSION"
+          echo "Done"
 
 
