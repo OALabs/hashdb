@@ -45,7 +45,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install awscli
           sudo apt-get update
-          apt-get install -y jq
+          sudo apt-get install -y jq
       
       - name: Publish to AWS Lambda Layer
         env:
