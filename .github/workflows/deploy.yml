@@ -58,7 +58,7 @@ jobs:
           echo "Publishing as a layer..."
           RESULT_DATA=$(aws lambda publish-layer-version --layer-name "$LAMBDA_LAYER_ARN" --zip-file fileb://dist/hashdb.zip)
           LAYER_VERSION=$(jq '.Version' <<< "$RESULT_DATA")
-          echo "Updating dependent lambda function $DEPENDENT_LAMBDA_FUNCTION to use layer version $LAYER_VERSION..." 
+          echo "Updating dependent lambda functions to use layer version $LAYER_VERSION..." 
           aws lambda update-function-configuration --function-name "$DEPENDENT_LAMBDA_FUNCTION" --layers "$LAMBDA_LAYER_ARN:$LAYER_VERSION"
           echo "Done"
 
