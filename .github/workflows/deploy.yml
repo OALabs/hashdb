@@ -52,6 +52,7 @@ jobs:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           LAMBDA_LAYER_ARN: ${{ secrets.LAMBDA_LAYER_ARN }}
+          AWS_DEFAULT_REGION: ${{ secrets.AWS_REGION }}
         run: |
           echo "Publishing as a layer..."
           local result=$(aws lambda publish-layer-version --layer-name "$LAMBDA_LAYER_ARN" --zip-file fileb://dist/hashdb.zip)
