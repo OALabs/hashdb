@@ -34,5 +34,26 @@ jobs:
           cp -r ./algorithms/* ./dist/python/algorithms/
           cd ./dist
           zip -r hashdb.zip ./python 
+      
+      - name: Set up Python 3.9
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.9
+          
+      - name: Install AWS CLI
+        run: |
+          python -m pip install --upgrade pip
+          pip install awscli
+      
+      - name: Publish to AWS Lambda Layer
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          LAMBDA_LAYER_ARN: ${{ secrets.LAMBDA_LAYER_ARN }}
+        run: |
+          echo "Publishing as a layer..."
+          aws lambda publish-layer-version --layer-name "$LAMBDA_LAYER_ARN" --zip-file ./dist/hashdb.zip 
+          echo "done"
+
 
 
