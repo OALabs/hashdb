@@ -54,7 +54,7 @@ jobs:
           LAMBDA_LAYER_ARN: ${{ secrets.LAMBDA_LAYER_ARN }}
         run: |
           echo "Publishing as a layer..."
-          local result=$(aws lambda publish-layer-version --layer-name "$LAMBDA_LAYER_ARN" --zip-file fileb:/dist/hashdb.zip)
+          local result=$(aws lambda publish-layer-version --layer-name "$LAMBDA_LAYER_ARN" --zip-file fileb://dist/hashdb.zip)
           LAYER_VERSION=$(jq '.Version' <<< "$result")
           echo "$LAYER_VERSION" 
 
