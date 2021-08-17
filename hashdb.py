@@ -8,12 +8,12 @@ import algorithms
 class AlgorithmError(Exception):
     pass
 
-def get_algorithms():
+def list_algorithms():
     return list(algorithms.modules.keys())
 
-def get_algorithm_hash(algorithm_name, data):
+def hash(algorithm_name, data):
     if algorithm_name not in list(algorithms.modules.keys()):
         raise AlgorithmError("Algorithm not found")
     if type(data) == str:
         data = data.encode('utf-8')
-    return algorithms.modules[algorithm_name].get_hash(data)
+    return algorithms.modules[algorithm_name].hash(data)
