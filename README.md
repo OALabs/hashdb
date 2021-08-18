@@ -72,6 +72,12 @@ All hashes must have the hash of the word ‘test’ in the `TEST_1` field.
 
 All hashes must include a function `hash(data)` that accepts a byte string and returns a hash of the string. 
 
+## Standing On The Shoulders of Giants 
+
+A big shout out to the FLARE team for their efforts with [shellcode_hashes](https://github.com/fireeye/flare-ida/tree/master/shellcode_hashes). Many years ago this project set the bar for quick and easy malware hash reversing and it’s still an extremely useful tool. So why duplicate it? 
+
+Frankly, it’s all about the wordlist and accessibility. We have seen a dramatic shift towards using hashes for all sorts of strings in malware now, and the old method of hashing all the Windows’ DLL exports just isn’t good enough. We wanted a solution that could continuously process millions of registry keys and values, filenames, and process names. And we wanted that data available via a REST API so that we could use it our automation workflows, not just our static analysis tools. That being said, we wouldn’t exist without shellcode_hashes, so credit where credit is due 🙌
+
 ---
 <p align="center">
 <img src="https://media.giphy.com/media/l0HlzDz1l3gU2nvLW/giphy.gif" width="50px">
