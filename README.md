@@ -4,7 +4,7 @@ HashDB is a community-sourced library of hashing algorithms used in malware.
 
 ## How To Use HashDB
 
-HashDB can be used as a stand along hashing library, but it also feeds the [HashDB Lookup Service](https://hashdb.openanalysis.net) run by OALabs. This service allows analysts to reverse hashes and retrieve hashed API names and string values.
+HashDB can be used as a stand alone hashing library, but it also feeds the [HashDB Lookup Service](https://hashdb.openanalysis.net) run by OALabs. This service allows analysts to reverse hashes and retrieve hashed API names and string values.
 
 ### Stand Alone Module 
 
@@ -66,9 +66,9 @@ PRs with changes outside of the `/algorithms` directory are not part of our auto
 
 All hashes must have a valid description in the `DESCRIPTION` field. 
 
-All hashes must have a type of either `unsigned_int` or `unsigned_long` in the TYPE field.
+All hashes must have a type of either `unsigned_int` or `unsigned_long` in the `TYPE` field. HashDB currently only accepts unsigned 32bit or 64bit hashes.
 
-All hashes must have the hash of the word ‘test’ in the `TEST_1` field.
+All hashes must have the hash of the word __test__ in the `TEST_1` field.
 
 All hashes must include a function `hash(data)` that accepts a byte string and returns a hash of the string. 
 
