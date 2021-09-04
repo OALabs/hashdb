@@ -43,12 +43,14 @@ jobs:
           LAMBDA_LAYER_ARN: ${{ secrets.LAMBDA_LAYER_ARN }}
           AWS_DEFAULT_REGION: ${{ secrets.AWS_REGION }}
           HASHDB_WORKER_LAMBDA_ARN: ${{ secrets.HASHDB_WORKER_LAMBDA_ARN }}
+          HASHDB_API_LAMBDA_ARN: ${{ secrets.HASHDB_API_LAMBDA_ARN }}
         run: |
           echo "Publishing as a layer..."
           RESULT_DATA=$(aws lambda publish-layer-version --layer-name "$LAMBDA_LAYER_ARN" --zip-file fileb://dist/hashdb.zip)
           LAYER_VERSION=$(jq '.Version' <<< "$RESULT_DATA")
           echo "Updating hashdb worker to use layer version $LAYER_VERSION..." 
-          UPDATE_RESULT_DATA=$(aws lambda update-function-configuration --function-name "$HASHDB_WORKER_LAMBDA_ARN" --layers "$LAMBDA_LAYER_ARN:$LAYER_VERSION")
+          UPDATE_RESULT_DATA1=$(aws lambda update-function-configuration --function-name "$HASHDB_WORKER_LAMBDA_ARN" --layers "$LAMBDA_LAYER_ARN:$LAYER_VERSION")
+          UPDATE_RESULT_DATA2=$(aws lambda update-function-configuration --function-name "$HASHDB_API_LAMBDA_ARN" --layers "$LAMBDA_LAYER_ARN:$LAYER_VERSION")
           echo '::set-output name=SELECTED_COLOR::green'
           echo "Done"
 
