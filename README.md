@@ -72,6 +72,20 @@ All hashes must have the hash of the word __test__ in the `TEST_1` field.
 
 All hashes must include a function `hash(data)` that accepts a byte string and returns a hash of the string. 
 
+### Adding Custom API Hashes
+
+Some hash algorithms hash the module name and API separately and combine the hashes to create a single module+API hash. An example of this is the standard [Metasploit ROR13 hash](https://github.com/rapid7/metasploit-framework/blob/master/external/source/shellcode/windows/x86/src/hash.py). These algorithms will not work with the standard wordlist and require a custom wordlist that includes both the module name and API. To handle these we allow custom algorithms that will only return a valid hash for some words. 
+
+Adding a custom API hash requires the following additional components. 
+
+1. The `TEST_1` field must be set to 4294967294 (-1).
+
+2. The hash algorithm must return the value 4294967294 for all invalid hashes.
+
+3. An additional `TEST_API_DATA_1` field must be added with an example word that is valid for the algorithm.
+
+4. An additional `TEST_API_1` field must be added with the hash of the `TEST_API_DATA_1` field.
+
 ## Standing On The Shoulders of Giants 
 
 A big shout out to the FLARE team for their efforts with [shellcode_hashes](https://github.com/fireeye/flare-ida/tree/master/shellcode_hashes). Many years ago this project set the bar for quick and easy malware hash reversing and it’s still an extremely useful tool. So why duplicate it? 
