@@ -23,6 +23,11 @@ HashDB can be cloned and used in your reverse engineering scripts like any stand
 
 OALabs run a free [HashDB Lookup Service](https://hashdb.openanalysis.net) that can be used to query a hash table for any hash listed in the HashDb library. Included in the hash tables are the complete set of Windows APIs as well as a many common strings used in malware. You can even add your own strings! 
 
+#### HashDB IDA Plugin
+
+The HashDB lookup service has an IDA Pro plugin that can be used to automate hash lookups directly from IDA! 
+The client can be downloaded from GitHub [here](https://github.com/OALabs/hashdb-ida).
+
 ## How To Add New Hashes
 
 HashDB relies on community support to keep our hash library current! Our goal is to have contributors spend **no more than five minutes** adding a new hash, from first commit, to PR. To achieve this goal we offer the following streamlined process. 
