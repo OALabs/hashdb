@@ -20,7 +20,7 @@
 #
 ########################################################################
 
-DESCRIPTION = "MULTIPLY 21 and ADD"
+DESCRIPTION = "ADD 0x1505 and SHIFT LEFT 5"
 TYPE = 'unsigned_int'
 TEST_1 = 205455184
 
