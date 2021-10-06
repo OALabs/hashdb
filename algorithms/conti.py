@@ -48,7 +48,7 @@ def hash(data):
     hash_val = 0
 
     for i in range(0, len(API_buffer)):
-        API_buffer[i] = ord(chr(API_buffer[i]).lower())
+        API_buffer[i] = ord(chr(API_buffer[i]))
 
     v15 = 0xFF889912
     string_length_2 = len(data)
