@@ -3,7 +3,7 @@ import zlib
 
 DESCRIPTION = "Standard crc32 hash."
 TYPE = 'unsigned_int'
-TEST_1 = 3632233996
+TEST_1 = 532866770
 
 
 def hash(data):
