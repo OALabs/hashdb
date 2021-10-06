@@ -41,7 +41,7 @@ def rol(inVal, numShifts, dataSize=32):
         raise ValueError('Bad numShifts')
     if (dataSize != 8) and (dataSize != 16) and (dataSize != 32) and (dataSize != 64):
         raise ValueError('Bad dataSize')
-    bitMask = ROTATE_BITMASK[dataSize]l
+    bitMask = ROTATE_BITMASK[dataSize]
     return bitMask & ((inVal << numShifts) | (inVal >> (dataSize-numShifts)))
 
 
