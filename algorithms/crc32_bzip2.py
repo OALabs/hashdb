@@ -22,7 +22,7 @@
 
 DESCRIPTION = "bzip2 version of crc32"
 TYPE = 'unsigned_int'
-TEST_1 = 864800684
+TEST_1 = 2691965320
 
 
 def hash(data):

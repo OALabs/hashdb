@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 DESCRIPTION = "FNV1 hash"
 TYPE = 'unsigned_int'
-TEST_1 = 3157003241
+TEST_1 = 116207608
 
 
 def hash(data):

@@ -22,7 +22,7 @@
 
 DESCRIPTION = "Carbanak API hashing used by CARBON SPIDER aka FIN7"
 TYPE = 'unsigned_int'
-TEST_1 = 502948
+TEST_1 = 204821865
 
 
 def hash(data):

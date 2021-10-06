@@ -22,7 +22,7 @@
 
 DESCRIPTION = "OR 0x21 and XOR and ROL 11"
 TYPE = 'unsigned_int'
-TEST_1 = 482670794
+TEST_1 = 1303693098
 
 
 ROTATE_BITMASK = {

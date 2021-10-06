@@ -22,7 +22,7 @@
 
 DESCRIPTION = "Conti ransomware api hash"
 TYPE = 'unsigned_int'
-TEST_1 = 2862337914
+TEST_1 = 2524534739
 
 
 def hash(data):

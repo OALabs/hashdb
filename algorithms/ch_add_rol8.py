@@ -22,7 +22,7 @@
 
 DESCRIPTION = "XOR and ROL 8 and SLICE hex"
 TYPE = 'unsigned_int'
-TEST_1 = 1937011729
+TEST_1 = 377121536
 
 
 ROTATE_BITMASK = {

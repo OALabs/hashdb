@@ -19,7 +19,7 @@ def test_algorithm_attributes():
 def test_algorithm_hash():
     from hashdb import algorithms
     for algorithm_name in list(algorithms.modules.keys()):
-        assert(algorithms.modules[algorithm_name].TEST_1 ==  algorithms.modules[algorithm_name].hash(b'test'))
+        assert(algorithms.modules[algorithm_name].TEST_1 ==  algorithms.modules[algorithm_name].hash(b'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'))
 
 
 def test_algorithm_duplicates():

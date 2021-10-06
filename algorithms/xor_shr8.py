@@ -22,7 +22,7 @@
 
 DESCRIPTION = "XOR and SHIFT RIGHT 21"
 TYPE = 'unsigned_int'
-TEST_1 = 785257690
+TEST_1 = 1054536684
 
 
 def hash(data):

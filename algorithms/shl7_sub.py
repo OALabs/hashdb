@@ -22,7 +22,7 @@
 
 DESCRIPTION = "SHIFT LEFT 7 and SUB used in DoublePulsar backdoor"
 TYPE = 'unsigned_int'
-TEST_1 = 320763534
+TEST_1 = 2493113697
 
 
 def hash(data):

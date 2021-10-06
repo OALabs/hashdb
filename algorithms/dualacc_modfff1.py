@@ -22,7 +22,7 @@
 
 DESCRIPTION = "DUALACC and MOD 0xfff1"
 TYPE = 'unsigned_int'
-TEST_1 = 73204161
+TEST_1 = 2329613580
 
 
 def hash(data):

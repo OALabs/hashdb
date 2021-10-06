@@ -22,7 +22,7 @@
 
 DESCRIPTION = "Multiple permutations of 0xe8677835"
 TYPE = 'unsigned_int'
-TEST_1 = 4243876727
+TEST_1 = 3113210072
 
 
 def hash(data):

@@ -22,7 +22,7 @@
 
 DESCRIPTION = "SHIFT and XOR with 0x82F63B78"
 TYPE = 'unsigned_int'
-TEST_1 = 3469162939
+TEST_1 = 1838188878
 
 
 def hash(data):

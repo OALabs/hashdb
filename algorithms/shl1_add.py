@@ -22,7 +22,7 @@
 
 DESCRIPTION = "SHIFT LEFT 1 and ADD"
 TYPE = 'unsigned_int'
-TEST_1 = 3356
+TEST_1 = 4294944522
 
 
 def hash(data):

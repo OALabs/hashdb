@@ -22,7 +22,7 @@
 
 DESCRIPTION = "MULTIPLY 0x83 and ADD"
 TYPE = 'unsigned_int'
-TEST_1 = 262526998
+TEST_1 = 150583839
 
 
 def hash(data):

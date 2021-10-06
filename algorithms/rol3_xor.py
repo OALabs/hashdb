@@ -22,7 +22,7 @@
 
 DESCRIPTION = "ROL 3 and XOR"
 TYPE = 'unsigned_int'
-TEST_1 = 62124
+TEST_1 = 831512572
 
 
 ROTATE_BITMASK = {

@@ -24,7 +24,7 @@ import zlib
 
 DESCRIPTION = "Adler-32 checksum with 666 seed."
 TYPE = 'unsigned_int'
-TEST_1 = 247530586
+TEST_1 = 737679269
 
 
 def hash(data):

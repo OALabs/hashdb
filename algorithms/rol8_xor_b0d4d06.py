@@ -22,7 +22,7 @@
 
 DESCRIPTION = "ROL 8 and XOR 0xB0D4D06 used in smoke bot"
 TYPE = 'unsigned_int'
-TEST_1 = 437996206
+TEST_1 = 2567160022
 
 
 ROTATE_BITMASK = {

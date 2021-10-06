@@ -22,7 +22,7 @@
 
 DESCRIPTION = "MULTIPLY 21 and ADD"
 TYPE = 'unsigned_int'
-TEST_1 = 2090756197
+TEST_1 = 205455184
 
 
 def hash(data):

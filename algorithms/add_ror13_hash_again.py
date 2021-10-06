@@ -22,7 +22,7 @@
 
 DESCRIPTION = "ADD and ROR 13 and ROR 13 the result"
 TYPE = 'unsigned_int'
-TEST_1 = 3859180858
+TEST_1 = 3913768234
 
 
 ROTATE_BITMASK = {

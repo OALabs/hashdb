@@ -22,7 +22,7 @@
 
 DESCRIPTION = "FNV1 and XOR 67 observed in Neutrino Bot launcher"
 TYPE = 'unsigned_int'
-TEST_1 = 2949674906
+TEST_1 = 2603337777
 
 
 def hash(data):
