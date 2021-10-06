@@ -1,3 +1,4 @@
+![AWS Deploy](https://github.com/OALabs/hashdb/actions/workflows/deploy.yml/badge.svg) [![Chat](https://img.shields.io/badge/chat-Discord-blueviolet)](https://discord.gg/cw4U3WHvpn) 
 # HashDB
 
 HashDB is a community-sourced library of hashing algorithms used in malware. 
@@ -18,8 +19,6 @@ HashDB can be cloned and used in your reverse engineering scripts like any stand
 ```
 
 ### HashDB Lookup Service 
-
-![AWS Deploy](https://github.com/OALabs/hashdb/actions/workflows/deploy.yml/badge.svg)
 
 OALabs run a free [HashDB Lookup Service](https://hashdb.openanalysis.net) that can be used to query a hash table for any hash listed in the HashDb library. Included in the hash tables are the complete set of Windows APIs as well as a many common strings used in malware. You can even add your own strings! 
 
@@ -46,22 +45,29 @@ HashDB relies on community support to keep our hash library current! Our goal is
     DESCRIPTION = "your hash description here"
     # Type can be either 'unsigned_int' (32bit) or 'unsigned_long' (64bit)
     TYPE = 'unsigned_int'
-    # Test must match the exact has of the string 'test'
-    TEST_1 = hash_of_string_test
+    # Test must match the exact has of the string 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
+    TEST_1 = hash_of_string_ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789
 
 
     def hash(data):
         # your hash code here
     ```
 
-5. Double check your Python style, we use Flak8 on Python 3.9. You can try the following lint command locally. 
+5. Double check your Python style, we use Flak8 on Python 3.9. You can try the following lint commands locally from the root of the git repository. 
 
     ```
-    pip install flak8
-    flake8 ./algorithms --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics --show-source
+    pip install flake8
+    flake8 ./algorithms --count --exit-zero --max-complexity=15 --max-line-length=127 --statistics --show-source
     ```
 
-6. Issue a pull request — your new algorithm will be automatically queued for testing and if successful it will be merged. 
+6. Test your code locally using our test suite. Run the folling commands locally from the root of the git repository. Note that you must run pytest as a module rather than directly or it won't pick up our test directory.
+
+    ```
+    pip install pytest
+    python -m pytest
+    ```
+
+7. Issue a pull request — your new algorithm will be automatically queued for testing and if successful it will be merged. 
 
 That’s it! Not only will your new hash be available in the HashDB library but a new hash table will be generated for the [HashDB Lookup Service](https://hashdb.openanalysis.net) and you can start reversing hashes immediately! 
 
@@ -73,7 +79,7 @@ All hashes must have a valid description in the `DESCRIPTION` field.
 
 All hashes must have a type of either `unsigned_int` or `unsigned_long` in the `TYPE` field. HashDB currently only accepts unsigned 32bit or 64bit hashes.
 
-All hashes must have the hash of the word __test__ in the `TEST_1` field.
+All hashes must have the hash of the string __ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789__ in the `TEST_1` field.
 
 All hashes must include a function `hash(data)` that accepts a byte string and returns a hash of the string. 
 
