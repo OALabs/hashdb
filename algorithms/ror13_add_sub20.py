@@ -32,6 +32,7 @@ ROTATE_BITMASK = {
     64: 0xffffffffffffffff,
 }
 
+
 def ror(inVal, numShifts, dataSize=32):
     '''rotate right instruction emulation'''
     if numShifts == 0:

@@ -51,4 +51,3 @@ def hash(data):
         val = rol(val, 0x7, 32)
         val = val ^ (0xff & i)
     return val
-

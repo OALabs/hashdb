@@ -31,7 +31,7 @@ def hash(data):
         ci = i
         ci = ci ^ val
         ci = ci * val
-        ci_hex = "%16x"%ci
+        ci_hex = "%16x" % ci
         ci_hex = ci_hex[8:16]
         ci_hex = int(ci_hex, 16)
         shr8 = val >> 8

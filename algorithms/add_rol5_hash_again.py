@@ -32,6 +32,7 @@ ROTATE_BITMASK = {
     64: 0xffffffffffffffff,
 }
 
+
 def rol(inVal, numShifts, dataSize=32):
     '''rotate left instruction emulation'''
     if numShifts == 0:

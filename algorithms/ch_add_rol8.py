@@ -50,7 +50,7 @@ def hash(data):
     for i in data:
         val = val ^ (i * 256)
         val = rol(val, 0x8, 32)
-        val_hex = "%08x"%val
+        val_hex = "%08x" % val
         valh_str = val_hex[4:6]
         valh = int(valh_str, 16)
         val = val ^ valh

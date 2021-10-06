@@ -26,10 +26,10 @@ TEST_1 = 3953483048
 
 
 ROTATE_BITMASK = {
-    8  : 0xff,
-    16 : 0xffff,
-    32 : 0xffffffff,
-    64 : 0xffffffffffffffff,
+    8: 0xff,
+    16: 0xffff,
+    32: 0xffffffff,
+    64: 0xffffffffffffffff,
 }
 
 

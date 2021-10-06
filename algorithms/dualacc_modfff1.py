@@ -30,4 +30,4 @@ def hash(data):
     for ltr in data:
         v8 = (ltr + v8) % 0x0FFF1
         v4 = (v4 + v8) % 0x0FFF1
-    return (v4 << 0x10)|v8
+    return (v4 << 0x10) | v8

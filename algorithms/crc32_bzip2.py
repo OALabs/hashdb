@@ -37,5 +37,5 @@ def hash(data):
         crc32_table[i] = v
     result = 0xffffffff
     for c in data:
-        result = (crc32_table[ c ^ ((result >> 24) & 0xff) ] ^ (result << 8)) & 0xffffffff
+        result = (crc32_table[c ^ ((result >> 24) & 0xff)] ^ (result << 8)) & 0xffffffff
     return (result ^ 0xffffffff) & 0xffffffff

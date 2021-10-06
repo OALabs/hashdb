@@ -30,7 +30,7 @@ def hash(data):
     for i in data:
         val ^= i
         for j in range(0, 8):
-            if (val&0x1) == 1:
+            if (val & 0x1) == 1:
                 val ^= 0xe8677835
             val >>= 1
     return val ^ 0xFFFFFFFF
