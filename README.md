@@ -1,4 +1,6 @@
-![AWS Deploy](https://github.com/OALabs/hashdb/actions/workflows/deploy.yml/badge.svg) [![Chat](https://img.shields.io/badge/chat-Discord-blueviolet)](https://discord.gg/cw4U3WHvpn) 
+<img width="1244" alt="overview_hashdb" src="https://user-images.githubusercontent.com/5906222/136885344-a084c245-42bf-4d43-98e8-addbf3a6b1a0.png">
+
+![AWS Deploy](https://github.com/OALabs/hashdb/actions/workflows/deploy.yml/badge.svg) [![Chat](https://img.shields.io/badge/chat-Discord-blueviolet)](https://discord.gg/cw4U3WHvpn) [![Support](https://img.shields.io/badge/Support-Patreon-FF424D)](https://www.patreon.com/oalabs)
 # HashDB
 
 HashDB is a community-sourced library of hashing algorithms used in malware. 
