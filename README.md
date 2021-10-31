@@ -55,7 +55,7 @@ HashDB relies on community support to keep our hash library current! Our goal is
         # your hash code here
     ```
 
-5. Double check your Python style, we use Flak8 on Python 3.9. You can try the following lint commands locally from the root of the git repository. 
+5. Double check your Python style, we use Flake8 on Python 3.9. You can try the following lint commands locally from the root of the git repository. 
 
     ```
     pip install flake8
