@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-DESCRIPTION = "Emotet November 2022"
+DESCRIPTION = "Emotet November 2021"
 TYPE = 'unsigned_int'
 TEST_1 = 3172443423
 
