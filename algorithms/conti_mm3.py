@@ -94,10 +94,8 @@ def hash( key ):
 
     #finalization
     unsigned_val = fmix( h1 ^ length )
-    return unsigned_val
-    if unsigned_val & 0x80000000 == 0:
-        return unsigned_val
-    else:
-        return -( (unsigned_val ^ 0xFFFFFFFF) + 1 )
+
+    # convert to unsigned int
+    return unsigned_val & 0xffffffff
 
 
