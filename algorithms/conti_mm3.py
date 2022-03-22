@@ -19,7 +19,7 @@ https://pypi.python.org/pypi/mmh3/2.3.1
 
 DESCRIPTION = "Conti ransomware Murmur3 API hashing"
 TYPE = 'unsigned_int'
-TEST_1 = 1813940549
+TEST_1 = 60915229
 
 import sys as _sys
 if (_sys.version_info > (3, 0)):
