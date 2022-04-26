@@ -18,6 +18,18 @@
 # Reference:
 # https://github.com/mandiant/flare-ida/blob/master/shellcode_hashes/make_sc_hash_db.py
 #
+# def gen_table():
+#     crc32_table = [0] * 256
+#     for i in range(256):
+#         v = i << 24
+#         for j in range(8):
+#             if (v & 0x80000000) == 0:
+#                 v = (2 * v) & 0xffffffff
+#             else:
+#                 v = ((2 * v) ^ 0x4C11DB7) & 0xffffffff
+#         crc32_table[i] = v
+#     return crc32_table
+#
 ########################################################################
 
 DESCRIPTION = "bzip2 version of crc32"
