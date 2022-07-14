@@ -8,7 +8,7 @@ Reference: https://c3rb3ru5d3d53c.github.io/malware-blog/lockbit-v3-api-hashing/
 """
 TYPE = 'unsigned_int'
 TEST_1 = 4294967294
-TEST_API_DATA_1 = b'kernel32.dll_FindFirstFileExW'
+TEST_API_DATA_1 = b'kernel32.dllFindFirstFileExW'
 TEST_API_1 = 0xaae0cefb ^ 0x29009fe6
 
 
@@ -30,9 +30,10 @@ def hash_algo(string, seed):
 def hash(data):
     # This selects for only the wordlist in hashdb with
     # the format <dllname>_<apiname>
-    if len(data.split(b'_')) != 2:
+    if len(data.split(b'.dll')) != 2:
         return 0xfffffffe
-    dll_name, api_name = data.split(b'_')
+    dll_name, api_name = data.split(b'.dll')
+    dll_name = dll_name + b'.dll'
     print(f"dll: {dll_name}, api: {api_name}")
     seed = 0
     dll_hash = hash_algo(dll_name, seed)
