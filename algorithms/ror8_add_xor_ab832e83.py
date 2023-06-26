@@ -14,6 +14,7 @@ ROTATE_BITMASK = {
     64: 0xffffffffffffffff,
 }
 
+
 def ror(inVal, numShifts, dataSize=32):
     '''rotate right instruction emulation'''
     if numShifts == 0:
@@ -25,6 +26,7 @@ def ror(inVal, numShifts, dataSize=32):
     bitMask = ROTATE_BITMASK[dataSize]
     return bitMask & ((inVal >> numShifts) | (inVal << (dataSize-numShifts)))
 
+
 def hash(data):
     state = 0x832E83AB
     for i in range(len(data)):
@@ -35,4 +37,3 @@ def hash(data):
             val += data[i]
         state ^= val
     return state
-
