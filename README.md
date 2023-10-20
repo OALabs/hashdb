@@ -47,7 +47,7 @@ HashDB relies on community support to keep our hash library current! Our goal is
     DESCRIPTION = "your hash description here"
     # Type can be either 'unsigned_int' (32bit) or 'unsigned_long' (64bit)
     TYPE = 'unsigned_int'
-    # Test must match the exact has of the string 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
+    # Test must match the exact hash of the string 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
     TEST_1 = hash_of_string_ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789
 
 
