@@ -7,5 +7,5 @@ TEST_1 = 150583839
 def hash(data):
     esi = 0
     for c in data:
-        esi = (ord(c) + 0x83 * esi) & 0xffffffff
+        esi = (c + 0x83 * esi) & 0xffffffff
     return (esi & 0x7fffffff)
