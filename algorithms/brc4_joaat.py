@@ -10,7 +10,7 @@ TEST_1 = 4059668722
 def hash(data):
     val = 0
     for c in data:
-        v1 = ord(c) + val
+        v1 = c + val
         v2 = (1025 * v1) & 0xffffffff
         v3 = v2 >> 6
         val = v2 ^ v3
