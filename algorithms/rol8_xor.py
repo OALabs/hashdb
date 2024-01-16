@@ -20,9 +20,9 @@
 #
 ########################################################################
 
-DESCRIPTION = "ROL 8 and XOR 0xB0D4D06 used in smoke bot"
+DESCRIPTION = "ROL 8 and XOR used in smoke bot"
 TYPE = 'unsigned_int'
-TEST_1 = 2567160022
+TEST_1 = 2450427344
 
 
 ROTATE_BITMASK = {
@@ -51,4 +51,4 @@ def hash(data):
         val = val ^ (i & 0xDF)
         val = rol(val, 0x8, 32)
         val = val + (i & 0xDF)
-    return (val ^ 0xB0D4D06) & 0xffffffff
+    return val & 0xffffffff
