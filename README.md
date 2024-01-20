@@ -59,10 +59,10 @@ HashDB relies on community support to keep our hash library current! Our goal is
 
     ```
     pip install flake8
-    flake8 ./algorithms --count --exit-zero --max-complexity=15 --max-line-length=127 --statistics --show-source
+    flake8 ./algorithms --count --select=E9,F63,F7,F82 --show-source --statistics
     ```
 
-6. Test your code locally using our test suite. Run the folling commands locally from the root of the git repository. Note that you must run pytest as a module rather than directly or it won't pick up our test directory.
+6. Test your code locally using our test suite. Run the following commands locally from the root of the git repository. Note that you must run pytest as a module rather than directly or it won't pick up our test directory.
 
     ```
     pip install pytest
