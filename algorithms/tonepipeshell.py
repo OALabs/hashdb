@@ -1,6 +1,6 @@
 # Created by Still Hsu <still@teamt5.org>
 
-DESCRIPTION = "TOnePipeShell hash with seed 0xC85E31"
+DESCRIPTION = "TOnePipeShell hash with seed 0xC85E31 (13131313)"
 TYPE = 'unsigned_int'
 TEST_1 = 3454880715
 
