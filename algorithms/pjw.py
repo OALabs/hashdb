@@ -19,8 +19,9 @@
 # https://github.com/mandiant/flare-ida/blob/master/shellcode_hashes/make_sc_hash_db.py
 #
 ########################################################################
-
-DESCRIPTION = "Carbanak API hashing used by CARBON SPIDER aka FIN7"
+# https://en.wikipedia.org/wiki/PJW_hash_function
+# 
+DESCRIPTION = "Standard PJW hash"
 TYPE = 'unsigned_int'
 TEST_1 = 204821865
 
